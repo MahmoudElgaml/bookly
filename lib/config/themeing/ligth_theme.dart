@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class MyLigthTheme{
 
-  static ThemeData lightTheme=ThemeData(
-      scaffoldBackgroundColor:primaryColor,
+  static ThemeData lightTheme=ThemeData.light(
+    //  scaffoldBackgroundColor:primaryColor,
       );
 
 }
