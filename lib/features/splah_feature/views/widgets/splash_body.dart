@@ -1,6 +1,8 @@
 import 'package:bookly_app_mvvm/core/utils/app_images.dart';
 import 'package:bookly_app_mvvm/core/utils/app_string.dart';
+import 'package:bookly_app_mvvm/features/home_feature/presntion/views/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SplashBody extends StatefulWidget {
   const SplashBody({Key? key}) : super(key: key);
@@ -10,6 +12,13 @@ class SplashBody extends StatefulWidget {
 }
 
 class _SplashBodyState extends State<SplashBody> {
+@override
+  void initState() {
+
+    super.initState();
+    goToHome();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +27,7 @@ class _SplashBodyState extends State<SplashBody> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(
-          Images.logo,
+          AppImages.logo,
         ),
         const Text(
           AppString.splashText,
@@ -27,4 +36,9 @@ class _SplashBodyState extends State<SplashBody> {
       ],
     );
   }
+void goToHome() {
+  Future.delayed(const Duration(seconds: 2),(){
+    Get.to(const HomeScreen(),transition: Transition.fade,duration: const Duration(seconds: 1));
+  });
+}
 }
