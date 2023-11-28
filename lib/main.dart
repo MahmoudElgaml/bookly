@@ -19,13 +19,17 @@ class MyApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: GetMaterialApp(
-        theme: MyLigthTheme.lightTheme,
-        darkTheme: MyDarkTheme.myDarkTheme,
-        themeMode: ThemeMode.dark,
-        debugShowCheckedModeBanner: false,
-        home: SplashScreen(),
-      ),
+      builder:  (context, child) {
+        return GetMaterialApp(
+          theme: MyLigthTheme.lightTheme,
+          darkTheme: MyDarkTheme.myDarkTheme,
+          themeMode: ThemeMode.dark,
+          debugShowCheckedModeBanner: false,
+          home: SplashScreen(),
+        );
+
+      }
     );
+
   }
 }

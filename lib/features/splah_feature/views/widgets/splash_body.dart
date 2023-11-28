@@ -37,8 +37,8 @@ class _SplashBodyState extends State<SplashBody> {
     );
   }
 void goToHome() {
-  Future.delayed(const Duration(seconds: 2),(){
-    Get.to(const HomeScreen(),transition: Transition.fade,duration: const Duration(seconds: 1));
+  Future.delayed(const Duration(seconds: 3),(){
+    Get.to(const HomeScreen(),transition: Transition.leftToRight,duration: const Duration(seconds: 2));
   });
 }
 }
