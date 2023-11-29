@@ -34,6 +34,7 @@ dependencies:
   flutter_screenutil: ^5.9.0
   carousel_slider: ^4.2.1
   gap: ^3.0.1
+  google_fonts: ^6.1.0
 
 
   # The following adds the Cupertino Icons font to your application.

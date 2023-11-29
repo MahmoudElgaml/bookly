@@ -21,11 +21,11 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder:  (context, child) {
         return GetMaterialApp(
-          theme: MyLigthTheme.lightTheme,
-          darkTheme: MyDarkTheme.myDarkTheme,
-          themeMode: ThemeMode.dark,
+          theme: MyDarkTheme.myDarkTheme,
+        //  darkTheme: MyDarkTheme.myDarkTheme,
+         // themeMode: ThemeMode.dark,
           debugShowCheckedModeBanner: false,
-          home: SplashScreen(),
+          home: const SplashScreen(),
         );
 
       }
