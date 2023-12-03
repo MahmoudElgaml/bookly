@@ -21,8 +21,8 @@ class HomeBody extends StatelessWidget {
           children: [
             const CustomAppBar(),
             const ListItem(),
-            const Gap(27),
-            Text(AppString.homeText, style: AppStyle.titleStyle),
+            Gap(27.h),
+            Text(AppString.homeText, style: AppStyle.textStyle18),
             Gap(20.h),
             BestSellerList(),
           ],

@@ -6,8 +6,7 @@ class MyLigthTheme{
 
   static ThemeData lightTheme=ThemeData(
 
-     textTheme : Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
-    //  scaffoldBackgroundColor:primaryColor,
+
       );
 
 }

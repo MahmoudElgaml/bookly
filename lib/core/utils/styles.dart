@@ -2,24 +2,24 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 abstract class AppStyle {
-  static TextStyle titleStyle = TextStyle(
-    fontSize: 18,
-    fontWeight: FontWeight.w500,
-  );
-  static TextStyle bookNameStyle=TextStyle(
-    fontSize: 20,
+  static TextStyle textStyle18= TextStyle(
+    fontSize: 18.sp,
     fontWeight: FontWeight.w600,
+  );
+  static TextStyle textStyle20=TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.normal,
 
 
   );
-  static TextStyle authorStyle=TextStyle(
+  static TextStyle textStyle14=TextStyle(
     fontSize: 14.sp,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.normal,
 
   );
-  static TextStyle boldStyle=TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.bold,
+  static TextStyle textStyle16=TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
 
   );
 }
