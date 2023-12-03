@@ -1,5 +1,6 @@
 import 'package:bookly_app_mvvm/core/utils/app_colors.dart';
 import 'package:bookly_app_mvvm/core/utils/app_images.dart';
+import 'package:bookly_app_mvvm/core/utils/components/book_rating.dart';
 import 'package:bookly_app_mvvm/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,7 +19,7 @@ class BestSellerCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 70.w,
+              width: 70.w,
               height: 105.h,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(7.w),
@@ -30,55 +31,46 @@ class BestSellerCard extends StatelessWidget {
                 AppImages.bookTest,
               )),
           Gap(30.w),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Spider Man",
-                style: AppStyle.textStyle20,
-              ),
-              Gap(2.h),
-              Text(
-                "mahmoud ELgamal",
-                style: AppStyle.textStyle14.copyWith(
-                  color: const Color(0xffb7b6bc),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: 150.w,
+                  child: Text(
+                    "Spider Man",
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
+                    style: AppStyle.textStyle20,
+                  ),
                 ),
-              ),
-              Gap(2.h),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    "19.99",
-                    style: AppStyle.textStyle20
-                        .copyWith(fontWeight: FontWeight.bold),
+                Gap(3.h),
+                Text(
+                  "mahmoud ELgamal",
+                  style: AppStyle.textStyle14.copyWith(
+                    color: const Color(0xffb7b6bc),
                   ),
-                  Gap(44.3.w),
-                  const Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                  ),
-                  Wrap(
-                    crossAxisAlignment: WrapCrossAlignment.center,
-                    children: [
-                      Text(
-                        "4.8",
-                        style: AppStyle.textStyle16,
-                      ),
-                      SizedBox(width: 6.3.w,),
-                      Text(
-                        "(2984)",
-                        style: AppStyle.textStyle14.copyWith(
-                          fontWeight: FontWeight.normal,
-                          color: opacitywhiteColor,
-                        ),
-                      ),
-                    ],
-                  )
-                ],
-              )
-            ],
+                ),
+                Gap(2.h),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "19.99",
+                  style: AppStyle.textStyle20
+                      .copyWith(fontWeight: FontWeight.bold),
+                ),
+                const Spacer(),
+                const Icon(
+                  Icons.star,
+                  color: Colors.yellow,
+                ),
+             const BookRating()
+              ],
+            )
+              ],
+            ),
           )
         ],
       ),
