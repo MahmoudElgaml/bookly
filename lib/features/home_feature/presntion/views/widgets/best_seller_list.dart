@@ -11,7 +11,7 @@ class BestSellerList extends StatelessWidget {
     return Expanded(
       child: ListView.separated(
         separatorBuilder: (context, index) => Gap(20.h),
-        itemBuilder: (context, index) => const BestSellerCard(),
+        itemBuilder: (context, index) => BestSellerCard(),
         itemCount: 10,
       ),
     );

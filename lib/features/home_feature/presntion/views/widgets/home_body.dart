@@ -13,20 +13,18 @@ class HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.all(17.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const CustomAppBar(),
-            const ListItem(),
-            Gap(27.h),
-            Text(AppString.homeText, style: AppStyle.textStyle18),
-            Gap(20.h),
-            BestSellerList(),
-          ],
-        ),
+    return Padding(
+      padding:  EdgeInsets.symmetric(horizontal: 30.w,vertical: 48.h ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const CustomAppBar(),
+          const ListItem(),
+          Gap(49.h),
+          Text(AppString.homeText, style: AppStyle.textStyle18),
+
+          BestSellerList(),
+        ],
       ),
     );
   }

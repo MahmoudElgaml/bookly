@@ -29,7 +29,7 @@ class BestSellerCard extends StatelessWidget {
               child: Image.asset(
                 AppImages.bookTest,
               )),
-          Gap(27.w),
+          Gap(30.w),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +54,7 @@ class BestSellerCard extends StatelessWidget {
                     style: AppStyle.textStyle20
                         .copyWith(fontWeight: FontWeight.bold),
                   ),
-                  Gap(50.w),
+                  Gap(44.3.w),
                   const Icon(
                     Icons.star,
                     color: Colors.yellow,
@@ -66,7 +66,7 @@ class BestSellerCard extends StatelessWidget {
                         "4.8",
                         style: AppStyle.textStyle16,
                       ),
-                      SizedBox(width: 10.w,),
+                      SizedBox(width: 6.3.w,),
                       Text(
                         "(2984)",
                         style: AppStyle.textStyle14.copyWith(
