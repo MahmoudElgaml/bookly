@@ -13,14 +13,14 @@ class BestSellerCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 294.w,
-      height: 105.h,
+      height: 140.h,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
               width: 70.w,
-              height: 105.h,
+              height: 140.h,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(7.w),
                   border: Border.all(

@@ -1,5 +1,6 @@
 import 'package:bookly_app_mvvm/config/themeing/dark_thme.dart';
 import 'package:bookly_app_mvvm/config/themeing/ligth_theme.dart';
+import 'package:bookly_app_mvvm/features/bookdetail_feature/presntation/view/book_detail_screen.dart';
 import 'package:bookly_app_mvvm/features/splah_feature/views/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         //  darkTheme: MyDarkTheme.myDarkTheme,
          // themeMode: ThemeMode.dark,
           debugShowCheckedModeBanner: false,
-          home: const SplashScreen(),
+          home: const BookDetailScreen(),
         );
 
       }

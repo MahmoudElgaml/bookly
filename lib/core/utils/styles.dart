@@ -22,4 +22,9 @@ abstract class AppStyle {
     fontWeight: FontWeight.w500,
 
   );
+  static TextStyle textStyle30=TextStyle(
+    fontSize: 30.sp,
+    fontWeight: FontWeight.normal,
+
+  );
 }
