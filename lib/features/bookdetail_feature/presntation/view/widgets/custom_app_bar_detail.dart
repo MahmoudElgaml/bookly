@@ -1,6 +1,8 @@
+import 'package:bookly_app_mvvm/config/routes/routers.dart';
 import 'package:bookly_app_mvvm/features/home_feature/presntion/views/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
+
 
 class CustomAppBarDetail extends StatelessWidget {
   const CustomAppBarDetail({Key? key}) : super(key: key);
@@ -10,7 +12,7 @@ class CustomAppBarDetail extends StatelessWidget {
     return Row(
       children: [
         IconButton(onPressed: () {
-          Get.to(HomeScreen());
+          context.go(AppRouter.homeScreen);
         }, icon: const Icon(Icons.highlight_remove)),
         const Spacer(),
         IconButton(

@@ -22,10 +22,11 @@ class BookDetail extends StatelessWidget {
         Gap(40.h),
         Text("The Jungle Book",style:AppStyle.textStyle30 ,),
         Text("Rudyard Kipling",style: AppStyle.textStyle18.copyWith(
+          fontStyle:FontStyle.italic ,
           color: opacitywhiteColor
         ),),
         Gap(14.h),
-        BookRating()
+        const BookRating()
       ],
     );
   }

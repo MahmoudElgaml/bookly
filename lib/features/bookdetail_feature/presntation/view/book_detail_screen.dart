@@ -21,17 +21,17 @@ class BookDetailScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const CustomAppBarDetail(),
-            Gap(25.h),
+            const Gap(25),
             const BookDetail(),
-            Gap(20.h),
+            const Gap(20),
             const DetailButton(),
-            Gap(10.h),
+            const Gap(10),
             Text(
               "You can also like",
-              textAlign: TextAlign.start,
+              textAlign:  TextAlign.start,
               style: AppStyle.textStyle14.copyWith(fontWeight: FontWeight.w600),
             ),
-            Gap(7.h),
+            const Gap(7),
             const LikeBook()
           ],
         ),

@@ -18,6 +18,7 @@ class DetailButton extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
+
                 backgroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius:
