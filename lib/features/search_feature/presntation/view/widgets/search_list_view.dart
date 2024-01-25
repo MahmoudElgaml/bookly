@@ -13,7 +13,7 @@ class SearchListView extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 30.w, ),
       child: ListView.separated(
         padding: EdgeInsets.zero,
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         separatorBuilder: (context, index) => Gap(20.h),
         itemBuilder: (context, index) => const BestSellerCard(),
         itemCount: 10,

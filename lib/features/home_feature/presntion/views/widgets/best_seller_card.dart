@@ -59,22 +59,18 @@ class BestSellerCard extends StatelessWidget {
                     ),
                   ),
                   Gap(2.h),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    "19.99",
-                    style: AppStyle.textStyle20
-                        .copyWith(fontWeight: FontWeight.bold),
-                  ),
-                  const Spacer(),
-                  const Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                  ),
-               const BookRating()
-                ],
-              )
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        "19.99",
+                        style: AppStyle.textStyle20
+                            .copyWith(fontWeight: FontWeight.bold),
+                      ),
+                      const Spacer(),
+                      const BookRating()
+                    ],
+                  )
                 ],
               ),
             )
