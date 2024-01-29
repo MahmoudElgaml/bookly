@@ -16,8 +16,8 @@ class HomeReboImp implements HomeRepo {
   Future<Either<Failure, List<Items>>> fetchBookBestSeller() async{
     try {
         var data= await  apiManger.getData(endpoint: EndPoints.newestBook);
-       List <Items>? books=BookModel.fromJson(data).items??=[];
-       return right(books);
+       List <Items>?Featurebooks=BookModel.fromJson(data).items??=[];
+       return right(Featurebooks);
 
     }
     catch (e){

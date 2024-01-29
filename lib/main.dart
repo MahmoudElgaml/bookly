@@ -4,14 +4,18 @@ import 'package:bookly_app_mvvm/core/api/api_manager.dart';
 import 'package:bookly_app_mvvm/core/utils/service_locator.dart';
 import 'package:bookly_app_mvvm/features/home_feature/data/repo/home_rebo_imp.dart';
 import 'package:bookly_app_mvvm/features/home_feature/presntion/view_model/home_cubit.dart';
+import 'package:bookly_app_mvvm/features/home_feature/presntion/view_model/home_newest_book_cubit.dart';
 import 'package:dio/dio.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/utils/bloc_observer.dart';
+
 void main() {
   setup();
+  Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
 }
 
@@ -24,9 +28,14 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => HomeCubit(
-           getIt.get<HomeReboImp>()
-          ),
+          create: (context) => HomeCubit(getIt.get<HomeReboImp>())
+            ..getFeature()
+            ,
+        ),
+        BlocProvider(
+          create: (context) => HomeNewestBookCubit(getIt.get<HomeReboImp>())
+           ..getNewestBook()
+          ,
         )
       ],
       child: ScreenUtilInit(

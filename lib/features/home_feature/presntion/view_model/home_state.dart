@@ -19,18 +19,4 @@ class HomeGetFeatureError extends HomeState {
   HomeGetFeatureError(this.errorMessage);
 }
 
-class HomeGetNewestLoading extends HomeState {}
 
-class HomeGetNewestSuccess extends HomeState {
-  List<Items> newestBook;
-
-  HomeGetNewestSuccess(this.newestBook);
-
-}
-
-class HomeGetNewestError extends HomeState {
-  String errorMessage;
-
-  HomeGetNewestError(this.errorMessage);
-
-}
