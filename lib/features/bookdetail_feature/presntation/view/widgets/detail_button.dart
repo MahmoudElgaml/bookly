@@ -18,13 +18,12 @@ class DetailButton extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-
                 backgroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius:
-                    BorderRadius.horizontal(left: Radius.circular(15.r)))),
+                        BorderRadius.horizontal(left: Radius.circular(15.r)))),
             child: Text(
-              "19.99",
+              "Free Book",
               style: AppStyle.textStyle18.copyWith(
                 color: blackColor,
                 fontWeight: FontWeight.bold,
@@ -41,7 +40,7 @@ class DetailButton extends StatelessWidget {
                 backgroundColor: pinkColor,
                 shape: RoundedRectangleBorder(
                     borderRadius:
-                    BorderRadius.horizontal(right: Radius.circular(15.r)))),
+                        BorderRadius.horizontal(right: Radius.circular(15.r)))),
             child: Text(
               "Free preview",
               style: AppStyle.textStyle16

@@ -20,7 +20,7 @@ class SearchListView extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         separatorBuilder: (context, index) => Gap(20.h),
         itemBuilder: (context, index) =>
-            BestSellerCard(HomeNewestBookCubit.get(context).book[index]),
+            BestSellerCard(book: HomeNewestBookCubit.get(context).book[index]),
         itemCount: 10,
       ),
     );

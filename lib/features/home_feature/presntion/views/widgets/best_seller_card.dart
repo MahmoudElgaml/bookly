@@ -3,6 +3,7 @@ import 'package:bookly_app_mvvm/core/utils/app_colors.dart';
 import 'package:bookly_app_mvvm/core/utils/app_images.dart';
 import 'package:bookly_app_mvvm/core/utils/components/book_rating.dart';
 import 'package:bookly_app_mvvm/core/utils/styles.dart';
+import 'package:bookly_app_mvvm/features/bookdetail_feature/data/model/thesend_book_model.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,16 +15,16 @@ import '../../../data/model/book_model.dart';
 class BestSellerCard extends StatelessWidget {
   Items book;
 
-  BestSellerCard(this.book, {super.key});
+
+  BestSellerCard({super.key, required this.book});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        context.go(AppRouter.bookDetailScreen);
+        context.go(AppRouter.bookDetailScreen,extra: book,);
       },
       child: SizedBox(
-
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,9 +34,9 @@ class BestSellerCard extends StatelessWidget {
               height: 140.h,
               decoration: BoxDecoration(
                   border: Border.all(
-                    color: Colors.white.withOpacity(.4),
-                    width: .3,
-                  )),
+                color: Colors.white.withOpacity(.4),
+                width: .3,
+              )),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: CachedNetworkImage(
@@ -54,7 +55,7 @@ class BestSellerCard extends StatelessWidget {
                   SizedBox(
                     width: 150.w,
                     child: Text(
-                      book.volumeInfo?.title??" ",
+                      book.volumeInfo?.title ?? " ",
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       style: AppStyle.textStyle20,
@@ -62,7 +63,9 @@ class BestSellerCard extends StatelessWidget {
                   ),
                   Gap(3.h),
                   Text(
-                    book.volumeInfo!.authors!.isNotEmpty?book.volumeInfo!.authors![0]:" no author",
+                    book.volumeInfo!.authors!.isNotEmpty
+                        ? book.volumeInfo!.authors![0]
+                        : " no author",
                     style: AppStyle.textStyle14.copyWith(
                       color: const Color(0xffb7b6bc),
                     ),
