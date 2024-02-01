@@ -22,7 +22,7 @@ class BestSellerCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        context.go(AppRouter.bookDetailScreen,extra: book,);
+        context.push(AppRouter.bookDetailScreen,extra: book,);
       },
       child: SizedBox(
         child: Row(

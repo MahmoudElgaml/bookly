@@ -28,7 +28,7 @@ class ListItem extends StatelessWidget {
                   enlargeCenterPage: true,
                   enlargeFactor: 0.33,
                   scrollDirection: Axis.horizontal,
-                  autoPlay: true,
+                  //autoPlay: true,
                 ),
               ),
             );

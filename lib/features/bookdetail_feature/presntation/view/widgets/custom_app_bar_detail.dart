@@ -12,7 +12,7 @@ class CustomAppBarDetail extends StatelessWidget {
     return Row(
       children: [
         IconButton(onPressed: () {
-          context.go(AppRouter.homeScreen);
+          context.pop();
         }, icon: const Icon(Icons.highlight_remove)),
         const Spacer(),
         IconButton(
