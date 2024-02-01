@@ -1,6 +1,7 @@
 import 'package:bookly_app_mvvm/core/utils/app_colors.dart';
 import 'package:bookly_app_mvvm/core/utils/app_images.dart';
 import 'package:bookly_app_mvvm/core/utils/components/book_rating.dart';
+import 'package:bookly_app_mvvm/core/utils/components/costume_image.dart';
 import 'package:bookly_app_mvvm/core/utils/styles.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -18,13 +19,7 @@ class BookDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CachedNetworkImage(
-          imageUrl: book.volumeInfo?.imageLinks?.smallThumbnail ?? "",
-          errorWidget: (context, url, error) => const Icon(Icons.error),
-          fit: BoxFit.fill,
-          width: 162.w,
-          height: 243.h,
-        ),
+        CostumeImage(image:book.volumeInfo?.imageLinks?.smallThumbnail ?? "" , height: 243.h, width: 162.w),
         Gap(40.h),
         Text(
           book.volumeInfo!.title??"",

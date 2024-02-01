@@ -24,7 +24,7 @@ class BookDetailScreen extends StatelessWidget {
     return BlocProvider(
       create: (context) => BookDetailCubit(getIt.get<BookDetailReboImpl>())
         ..getSameBook(extraString.volumeInfo!.categories!.isEmpty
-            ? ""
+            ? extraString.volumeInfo!.title??""
             : extraString.volumeInfo!.categories![0]),
       child: Scaffold(
         body: Padding(
