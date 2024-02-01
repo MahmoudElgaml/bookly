@@ -24,7 +24,7 @@ class BookDetailScreen extends StatelessWidget {
     return BlocProvider(
       create: (context) => BookDetailCubit(getIt.get<BookDetailReboImpl>())
         ..getSameBook(extraString.volumeInfo!.categories!.isEmpty
-            ? extraString.volumeInfo!.title??""
+            ? extraString.volumeInfo!.title ?? ""
             : extraString.volumeInfo!.categories![0]),
       child: Scaffold(
         body: Padding(
@@ -37,13 +37,13 @@ class BookDetailScreen extends StatelessWidget {
                 const Gap(25),
                 BookDetail(extraString),
                 const Gap(20),
-                const DetailButton(),
+                DetailButton(extraString),
                 const Gap(10),
                 Text(
                   "You can also like",
                   textAlign: TextAlign.start,
-                  style:
-                      AppStyle.textStyle14.copyWith(fontWeight: FontWeight.w600),
+                  style: AppStyle.textStyle14
+                      .copyWith(fontWeight: FontWeight.w600),
                 ),
                 const Gap(7),
                 const LikeBook()
