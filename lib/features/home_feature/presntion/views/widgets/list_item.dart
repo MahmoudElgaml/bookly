@@ -1,4 +1,5 @@
 import 'package:bookly_app_mvvm/core/utils/components/costum_error_widget.dart';
+import 'package:bookly_app_mvvm/core/utils/components/costume_feature_loading.dart';
 import 'package:bookly_app_mvvm/features/home_feature/presntion/view_model/home_cubit.dart';
 import 'package:bookly_app_mvvm/features/home_feature/presntion/views/widgets/book_item.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -35,7 +36,7 @@ class ListItem extends StatelessWidget {
           } else if (state is HomeGetFeatureError) {
             return CostumeErrorWidget(state.errorMessage);
           } else {
-            return const Center(child: CircularProgressIndicator());
+            return const CostumeFeatureLoading();
           }
         },
         listener: (BuildContext context, HomeState state) {});

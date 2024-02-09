@@ -10,30 +10,32 @@ class SearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextEditingController txt = TextEditingController();
-    return Padding(
-      padding: const EdgeInsets.all(10),
-      child: TextField(
-        onTap: () {},
-        onChanged: (value) {
-          if(value ==""){
-          }
-          else {
-            BlocProvider.of<SearchCubit>(context).getBySearch(search: value);
-          }
-        },
-        controller: txt,
-        style: const TextStyle(color: Colors.black),
-        decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Colors.transparent),
-            borderRadius: BorderRadius.circular(25),
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.all(10),
+        child: TextField(
+          onTap: () {},
+          onChanged: (value) {
+            if(value ==""){
+            }
+            else {
+              BlocProvider.of<SearchCubit>(context).getBySearch(search: value);
+            }
+          },
+          controller: txt,
+          style: const TextStyle(color: Colors.black),
+          decoration: InputDecoration(
+            enabledBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: Colors.transparent),
+              borderRadius: BorderRadius.circular(25),
+            ),
+            hintText: "what book you Search?",
+            hintStyle: const TextStyle(
+              fontWeight: FontWeight.w400,
+              color: Colors.black,
+            ),
+            filled: true,
           ),
-          hintText: "what book you Search?",
-          hintStyle: const TextStyle(
-            fontWeight: FontWeight.w400,
-            color: Colors.black,
-          ),
-          filled: true,
         ),
       ),
     );

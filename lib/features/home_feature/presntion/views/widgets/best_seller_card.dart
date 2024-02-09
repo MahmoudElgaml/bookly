@@ -27,15 +27,16 @@ class BestSellerCard extends StatelessWidget {
       child: SizedBox(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               width: 70.w,
               height: 140.h,
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
                   border: Border.all(
                 color: Colors.white.withOpacity(.4),
-                width: .3,
+                width: .4,
               )),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),

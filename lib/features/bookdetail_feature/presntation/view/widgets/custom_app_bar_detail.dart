@@ -13,7 +13,7 @@ class CustomAppBarDetail extends StatelessWidget {
       children: [
         IconButton(onPressed: () {
           context.pop();
-        }, icon: const Icon(Icons.highlight_remove)),
+        }, icon: const Icon(Icons.arrow_back_outlined)),
         const Spacer(),
         IconButton(
             onPressed: () {}, icon: const Icon(Icons.shopping_cart_outlined)),

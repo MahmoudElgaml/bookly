@@ -13,49 +13,30 @@ class HomeReboImp implements HomeRepo {
   HomeReboImp(this.apiManger);
 
   @override
-  Future<Either<Failure, List<Items>>> fetchBookBestSeller() async{
+  Future<Either<Failure, List<Items>>> fetchBookBestSeller() async {
     try {
-        var data= await  apiManger.getData(endpoint: EndPoints.newestBook);
-       List <Items>?Featurebooks=BookModel.fromJson(data).items??=[];
-       return right(Featurebooks);
-
-    }
-    catch (e){
-      if(e is DioException) {
+      var data = await apiManger.getData(endpoint: EndPoints.newestBook);
+      List<Items>? Featurebooks = BookModel.fromJson(data).items ??= [];
+      return right(Featurebooks);
+    } catch (e) {
+      if (e is DioException) {
         return left(ServerFailure.fromServer(e));
       }
-       return left(ServerFailure(e.toString()));
-
-
-      //return left(ServerFailure());
-
+      return left(ServerFailure(e.toString()));
     }
   }
 
   @override
-  Future<Either<Failure, List<Items>>> fetchBooks() async{
+  Future<Either<Failure, List<Items>>> fetchBooks() async {
     try {
-      var data= await  apiManger.getData(endpoint: EndPoints.FeatureBook);
-      List <Items>? books=BookModel.fromJson(data).items??=[];
+      var data = await apiManger.getData(endpoint: EndPoints.FeatureBook);
+      List<Items>? books = BookModel.fromJson(data).items ??= [];
       return right(books);
-
-    }
-    catch (e){
-      if(e is DioException) {
+    } catch (e) {
+      if (e is DioException) {
         return left(ServerFailure.fromServer(e));
       }
       return left(ServerFailure(e.toString()));
-
-
-      //return left(ServerFailure());
-
     }
   }
-
- // @override
-  //Future<Either<Failure, List<BookModel>>> fetchBooks() {
-//
- // }
-
-
 }

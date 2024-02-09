@@ -8,7 +8,7 @@ class CostumeImage extends StatelessWidget {
   double width;
   double height;
 
-  CostumeImage({required this.image,required this.height ,required this.width,super.key});
+  CostumeImage({required this.image,required this.height ,required this.width ,super.key});
 
   @override
   Widget build(BuildContext context) {

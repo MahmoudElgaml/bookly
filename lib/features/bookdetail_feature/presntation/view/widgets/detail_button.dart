@@ -36,8 +36,9 @@ class DetailButton extends StatelessWidget {
           ),
         ),
         Container(
-          width: 150.w,
+          width: 155.w,
           height: 48.h,
+
           child: ElevatedButton(
             onPressed: () async {
               if (book.volumeInfo!.previewLink != null) {
@@ -45,14 +46,19 @@ class DetailButton extends StatelessWidget {
               }
             },
             style: ElevatedButton.styleFrom(
-                backgroundColor: pinkColor,
-                shape: RoundedRectangleBorder(
-                    borderRadius:
-                        BorderRadius.horizontal(right: Radius.circular(15.r)))),
+              backgroundColor: pinkColor,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.horizontal(
+                  right: Radius.circular(15.r),
+                ),
+              ),
+            ),
             child: Text(
               "Free preview",
-              style: AppStyle.textStyle16
-                  .copyWith(color: whiteColor, fontWeight: FontWeight.bold),
+              style: AppStyle.textStyle16.copyWith(
+                color: whiteColor,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         )

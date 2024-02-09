@@ -7,6 +7,7 @@ import 'package:bookly_app_mvvm/features/search_feature/presntation/view_model/s
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 
 class SearchBody extends StatelessWidget {
   const SearchBody({Key? key}) : super(key: key);
@@ -15,15 +16,21 @@ class SearchBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => SearchCubit(SearchRepoImpl(getIt.get<ApiManger>())),
-      child: const SafeArea(
+      child:  SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
 
             children: [
-              SearchTextField(),
-              Gap(20),
-              Expanded(child: SearchListView()),
+              Row(
+                children: [
+                  IconButton(onPressed: () {
+                     context.pop();}, icon: const Icon(Icons.arrow_back_outlined)),
+                  const SearchTextField(),
+                ],
+              ),
+              const Gap(20),
+              const Expanded(child: SearchListView()),
 
             ],
           ),
