@@ -13,7 +13,7 @@ class AppRouter {
   static final router = GoRouter(routes: [
     GoRoute(
       path: splash,
-      builder: (context, state) => const SplashScreen(),
+      builder: (context,  state) => const SplashScreen(),
     ),
     GoRoute(
       path: homeScreen,
