@@ -1,6 +1,45 @@
-# bookly_app_mvvm
+# bookly_app_mvvm Description
 
-A new Flutter project.
+bookly app is use to view free books and can read it and can search about any free book you want 
+
+# Tech Stack
+
+(dart ,flutter)
+
+package i use:
+
+ 1-flutter_screenutil: for responsive ui
+ 
+ 2- carousel_slider:.
+ 
+ 3- gap:.
+ 
+ 4- google_fonts:.
+ 
+ 5- go_router: for navigation 
+ 
+ 6- dartz: to use Ethier class
+ 
+ 7- dio: To fetch api and use it ro handel errors
+ 
+ 8- bloc: as stateMangement
+ 
+ 9- flutter_bloc:as stateMangement
+ 
+ 10- get_it: to use singletone pattern 
+ 
+ 11- cached_network_image:
+ 
+ 12- shimmer: better ui for loading
+ 
+ 13- url_launcher:
+ 
+# Design
+
+
+https://github.com/MahmoudElgaml/bookly/assets/144808369/601a2057-dbe9-4cf1-a2cb-f168724ff611
+
+
 
 ## Getting Started
 
